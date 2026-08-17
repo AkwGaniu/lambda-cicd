@@ -1,8 +1,8 @@
 import json
 
-def lambda_function(event, context):
+def lambda_hamdler(event, context):
   # TODO implement
   return {
     'statusCode': 200,
-    'body': json.dumps('Hello Lambda! from VS Code..')
+    'body': json.dumps('Hello Lambda! from VS Code...')
   }

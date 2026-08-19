@@ -14,7 +14,7 @@ Resources:
   MyCICDS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
+      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket-ga'
 
       Tags:
         - Key: Environment

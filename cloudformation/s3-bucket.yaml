@@ -17,10 +17,8 @@ Resources:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
 
       Tags:
-        - Key: Name
-          Value: MyCICDS3Bucket
         - Key: Environment
-          Value: "${Environment} Environment"
+          Value: !Ref Environment
 
 Outputs:
   BucketName:

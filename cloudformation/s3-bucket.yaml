@@ -18,9 +18,9 @@ Resources:
 
       Tags:
         - Key: Name
-        - Value: MyCICDS3Bucket
+          Value: MyCICDS3Bucket
         - Key: Environment
-        - Value: "${Environment} Environment"
+          Value: "${Environment} Environment"
 
 Outputs:
   BucketName:

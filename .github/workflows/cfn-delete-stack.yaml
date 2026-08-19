@@ -2,6 +2,7 @@ name: Delete Cloudformation Stack when PR is closed
 
 on:
   pull_request:
+    types: ['closed']
     paths:
       - 'cloudformation/*'
 

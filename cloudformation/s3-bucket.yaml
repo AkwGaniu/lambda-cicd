@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: "S3 Bucket Template for our CICD Pull Request"
 
-Parameter:
+Parameters:
   Environment:
     Type: String
     default: test
@@ -22,6 +22,6 @@ Resources:
         - Key: Environment
         - Value: "${Environment} Environment"
 
-Output:
-  Description: "Name of created bucket"
-  Value: !Ref MyCICDS3Bucket
+  Outputs:
+    Description: "Name of created bucket"
+    Value: !Ref MyCICDS3Bucket

@@ -38,12 +38,12 @@ jobs:
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          scripts: |
+          script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number
               owner: context.repo.owner
               repo: context.repo.repo
-              body: 'Cloudformation test stack deployed. Stack name: 'pr-test-stack-${github.event.pull_request.number}
+              body: 'Cloudformation test stack deployed. Stack name: 'pr-test-stack-${{ github.event.pull_request.number }}
             })
       
   cleanup-on-merge:

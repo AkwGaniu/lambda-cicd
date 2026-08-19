@@ -23,5 +23,6 @@ Resources:
         - Value: "${Environment} Environment"
 
   Outputs:
-    Description: "Name of created bucket"
-    Value: !Ref MyCICDS3Bucket
+    BucketName:
+      Description: "Name of created bucket"
+      Value: !Ref MyCICDS3Bucket

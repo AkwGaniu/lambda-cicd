@@ -1,4 +1,4 @@
-name: Validate Cloudformation Template on Pull Reques
+name: Delete Cloudformation Stack when PR is closed
 
 on:
   pull_request:

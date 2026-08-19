@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: "S3 Bucket Template for our CICD Pull Request"
+
+Parameter:
+  Environment:
+    Type: String
+    default: test
+    AllowedValues:
+      - test
+      - staging
+      - production
+
+Resources:
+  MyCICDS3Bucket:
+    Type: 'AWS::S3::bucket'
+    Properties:
+      BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
+
+      Tags:
+        - Key: Name
+        - Value: !Ref MyCICDS3Bucket
+
+Output:
+  Description: "Name of created bucket"
+  Value: !Ref MyCICDS3Bucket

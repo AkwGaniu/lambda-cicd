@@ -4,7 +4,7 @@ Description: "S3 Bucket Template for our CICD Pull Request"
 Parameters:
   Environment:
     Type: String
-    default: test
+    Default: test
     AllowedValues:
       - test
       - staging
@@ -12,17 +12,17 @@ Parameters:
 
 Resources:
   MyCICDS3Bucket:
-    Type: 'AWS::S3::bucket'
+    Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
 
       Tags:
         - Key: Name
-        - Value: !Ref MyCICDS3Bucket
+        - Value: MyCICDS3Bucket
         - Key: Environment
         - Value: "${Environment} Environment"
 
-  Outputs:
-    BucketName:
-      Description: "Name of created bucket"
-      Value: !Ref MyCICDS3Bucket
+Outputs:
+  BucketName:
+    Description: "Name of created bucket"
+    Value: !Ref MyCICDS3Bucket
